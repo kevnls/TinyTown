@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<story title="Epic Tale">
+  <chapters>
+    <chapter title="Chapter 1">
+      <paragraphs>
+        <paragraph>This is where the main story will be told.</paragraph>
+        <paragraph>This order will be retained in the array after deserialization.</paragraph>
+        <paragraph>So I should be able to just iterate over it sequentially.</paragraph>
+      </paragraphs>
+      <dialogs>
+        <dialog characterType="GoodGuy">
+          <phrases>
+            <phrase>Do you think the sportingball team will make it to the contest?</phrase>
+            <phrase>Hey there honey buns!</phrase>
+            <phrase>Did you see that ludicrous display last night?!</phrase>
+            <phrase>Did someone steal your sweet roll?</phrase>
+            <phrase>Is any of this for real or not?</phrase>
+            <phrase>Whoever rote this game is an idiot!</phrase>
+            <phrase>I am error.</phrase>
+            <phrase>What the heck is Dirdle Perfut?</phrase>
+            <phrase>This game is awful!  Kevin is a total jerk.</phrase>
+            <phrase>I could've been a contender.</phrase>
+            <phrase>Keepin' it weird.</phrase>
+            <phrase>Born and bred in the briar patch.</phrase>
+            <phrase>Did you see that naked person wandering around?</phrase>
+            <phrase>Bananas were Elvis' jam.</phrase>
+            <phrase>An 'apron' is actually a 'napron'.</phrase>
+            <phrase>Ever play any Robotron?</phrase>
+            <phrase>There is nothing that you posess which I cannot take away.</phrase>
+          </phrases>
+        </dialog>
+        <dialog characterType="BadGuy">
+          <phrases>
+            <phrase>Bzzt Bip Glak!</phrase>
+            <phrase>Prrt Prrt Wadabble!</phrase>
+            <phrase>Fzz Brr Bloop!</phrase>
+            <phrase>Bop Dirdle Perfut!</phrase>
+            <phrase>Gak Libit Tronk!</phrase>
+            <phrase>Dirdle Perfut!</phrase>
+            <phrase>Bzzzt Bazzzook!!</phrase>
+            <phrase>Wizzle Dirdle Perfut!</phrase>
+          </phrases>
+        </dialog>
+      </dialogs>
+    </chapter>
+    <chapter title="Chapter 2">
+      <paragraphs>
+        <paragraph>This is where the main story will be told.</paragraph>
+        <paragraph>This order will be retained in the array after deserialization.</paragraph>
+        <paragraph>So I should be able to just iterate over it sequentially.</paragraph>
+      </paragraphs>
+      <dialogs>
+        <dialog characterType="GoodGuy">
+          <phrases>
+            <phrase>There are monsters around!</phrase>
+            <phrase>Run for your lives!</phrase>
+          </phrases>
+        </dialog>
+        <dialog characterType="BadGuy">
+          <phrases>
+            <phrase>Die good guys!</phrase>
+            <phrase>Exterminate!</phrase>
+          </phrases>
+        </dialog>
+      </dialogs>
+    </chapter>
+  </chapters>
+</story>
+
+
+
+
+
+
+
+
+
