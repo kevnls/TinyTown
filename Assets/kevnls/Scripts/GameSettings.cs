@@ -40,11 +40,13 @@ namespace kevnls
             if (rain.activeSelf)
             {
                 rain.SetActive(false);
+                RenderSettings.fogDensity = 8.0F;
                 RenderSettings.skybox.SetColor("_Tint", clearTint);
             }
             else
             {
                 rain.SetActive(true);
+                RenderSettings.fogDensity = 2.0F;
                 RenderSettings.skybox.SetColor("_Tint", rainTint);
             }
         }
