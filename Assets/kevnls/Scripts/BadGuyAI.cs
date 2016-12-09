@@ -19,7 +19,7 @@ namespace kevnls
         public float shooterMinDistance = 10.0F;
 
         private string isSaying = "Bzzzt Bazzzook!!";
-        private NavMeshAgent navAgent;
+        private UnityEngine.AI.NavMeshAgent navAgent;
         private GameObject deathParticles;
         private Text speechText;
         private Image speechBubble;
@@ -33,7 +33,7 @@ namespace kevnls
 
         void Start()
         {
-            navAgent = GetComponent<NavMeshAgent>();
+            navAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
             deathParticles = transform.Find("DeathParticles").gameObject;
             speechBubble = transform.Find("BadGuyCanvas").gameObject.GetComponentInChildren<Image>();
             speechText = speechBubble.GetComponentInChildren<Text>();
@@ -226,7 +226,7 @@ namespace kevnls
         private void Die()
         {
             //stops update from trying to move the character on the nav mesh
-            gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
 
             //turns off the colliders
             gameObject.GetComponentInChildren<CapsuleCollider>().enabled = false;
