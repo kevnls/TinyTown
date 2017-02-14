@@ -17,9 +17,9 @@ namespace kevnls
 
         void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.tag == "Player" || other.gameObject.tag == "GoodGuy" || other.gameObject.tag == "BadGuy")
+            if (other.gameObject.tag == "Player" || other.gameObject.tag == "GoodGuyCollider" || other.gameObject.tag == "BadGuyCollider")
             {
-                other.gameObject.SendMessage("GotHit");
+                other.gameObject.SendMessageUpwards("GotHit");
                 Destroy(gameObject);
             }
         }
