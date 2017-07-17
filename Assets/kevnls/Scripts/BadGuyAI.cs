@@ -128,8 +128,8 @@ namespace kevnls
 
         private void Fire()
         {
-            Transform projectileSpawnLeft = transform.FindChild("ProjectileSpawnLeft");
-            Transform projectileSpawnRight = transform.FindChild("ProjectileSpawnRight");
+            Transform projectileSpawnLeft = transform.Find("ProjectileSpawnLeft");
+            Transform projectileSpawnRight = transform.Find("ProjectileSpawnRight");
 
             GameObject projectile1 = (GameObject)Instantiate(Resources.Load("Projectile"), projectileSpawnLeft.position, Quaternion.identity);
             GameObject projectile2 = (GameObject)Instantiate(Resources.Load("Projectile"), projectileSpawnRight.position, Quaternion.identity);
@@ -236,7 +236,7 @@ namespace kevnls
             gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
 
             //stops the rocket particle emitter if the character has one
-            Transform hoverRocket = gameObject.transform.FindChild("HoverRocket");
+            Transform hoverRocket = gameObject.transform.Find("HoverRocket");
             if (hoverRocket != null)
             {
                 hoverRocket.GetComponent<ParticleSystem>().Stop();
