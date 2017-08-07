@@ -13,6 +13,7 @@ namespace kevnls
         public GameObject rain;
         public Color rainTint;
         public Color clearTint;
+        public int infectedTriggerCount = 5;
 
         private float nextRain;
 
