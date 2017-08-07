@@ -12,7 +12,7 @@ namespace kevnls
         public Transform destinationLocation;
         public Transform victimLocation;
         public bool isTalking = true;
-        public bool doorChaser = false;
+        public bool isDoorChaser = false;
         public bool isShooter = false;
         public float projectileForce = 75.0F;
         public float fireRate = 1.0F;
@@ -94,7 +94,7 @@ namespace kevnls
                     }
                 }
 
-                if (doorChaser)
+                if (isDoorChaser)
                 {
                     if (CheckIfInsideDestroyRange())
                     {

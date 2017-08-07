@@ -90,13 +90,13 @@ namespace kevnls
             {
                 //these guys head to doors unless they're interrupted by other victims, including the player
                 spawnedCharacter.GetComponent<BadGuyAI>().destinationLocation = GetRandomSpawnTransform(doors);
-                spawnedCharacter.GetComponent<BadGuyAI>().doorChaser = true;
+                spawnedCharacter.GetComponent<BadGuyAI>().isDoorChaser = true;
             }
             else if (spawnedCharacter.name.Contains("eye"))
             {
                 //these guys head to doors unless they're interrupted by other victims, including the player
                 spawnedCharacter.GetComponent<BadGuyAI>().destinationLocation = GetRandomSpawnTransform(doors);
-                spawnedCharacter.GetComponent<BadGuyAI>().doorChaser = true;
+                spawnedCharacter.GetComponent<BadGuyAI>().isDoorChaser = true;
             }
         }
 

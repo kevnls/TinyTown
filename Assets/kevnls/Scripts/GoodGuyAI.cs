@@ -48,7 +48,7 @@ namespace kevnls
                     iAmStopped = true;
 
                     //stops the character
-                    navAgent.Stop();
+                    navAgent.isStopped = true;
 
                     //rotates the character
                     Quaternion rotate = Quaternion.LookRotation(player.transform.position - transform.position);
@@ -61,7 +61,7 @@ namespace kevnls
                 {
                     if (iAmStopped)
                     {
-                        navAgent.Resume();
+                        navAgent.isStopped = false;
                         gameObject.GetComponentInChildren<Animator>().enabled = true;
                         iAmStopped = false;
                     }
