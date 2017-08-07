@@ -9,6 +9,9 @@ namespace kevnls
         private GameState gameState;
         private Gun gun;
         private int gunRange = 1000;
+        private bool isRaging = false;
+        private float rageDuration;
+        private float rageTimer = 0.0F;
 
         // Use this for initialization
         void Start() 
@@ -25,6 +28,20 @@ namespace kevnls
             {
                 Fire();
             }
+
+            if (isRaging)
+            {
+                //countdown timer for rage duration
+                if (Time.fixedTime > rageTimer)
+                {
+                    rageTimer = Time.fixedTime + rageDuration;
+                    //do rage (updates)
+                }
+                else
+                {
+                    EndInfectedRage();
+                }
+            }
         }
 
         private void GotHit()
@@ -35,6 +52,20 @@ namespace kevnls
         private void GotInfected()
         {
             gameState.PlayerInfected();
+        }
+
+        private void TriggerInfectedRage(float duration)
+        {
+            isRaging = true;
+            rageDuration = duration;
+            //do rage (settings, one-time)
+        }
+
+        private void EndInfectedRage()
+        {
+            rageTimer = 0.0F;
+            isRaging = false;
+            //end rage (settings, one-time)
         }
 
         private void Fire()

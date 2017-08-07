@@ -14,11 +14,14 @@ namespace kevnls
         public Color rainTint;
         public Color clearTint;
         public int infectedTriggerCount = 5;
+        public float infectedRageDuration = 10.0F;
 
         private float nextRain;
 
         void Start()
         {
+            GameState.infectedRageDuration = infectedRageDuration;
+            GameState.infectedTriggerCount = infectedTriggerCount;
             Cursor.visible = showCursor;
             rain = GameObject.FindGameObjectWithTag("Rain");
         }

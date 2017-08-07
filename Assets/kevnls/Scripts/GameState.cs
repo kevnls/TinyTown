@@ -17,9 +17,14 @@ namespace kevnls
         private static GameObject score;
         private static Text kills;
         private static StringBuilder sb = new StringBuilder();
+        private GameObject player;
+
+        public static int infectedTriggerCount;
+        public static float infectedRageDuration;
 
         void Start()
         {
+            player = GameObject.Find("Player");
             HUD = GameObject.Find("HUD");
             score = HUD.transform.Find("Score").gameObject;
             kills = score.GetComponentInChildren<Text>();
@@ -59,6 +64,12 @@ namespace kevnls
         public void PlayerInfected()
         {
             playerInfecteds++;
+
+            if (playerInfecteds >= infectedTriggerCount)
+            {
+                player.SendMessage("TriggerInfectedRage", infectedRageDuration);
+                playerInfecteds = 0;
+            }
         }
     }
 }
