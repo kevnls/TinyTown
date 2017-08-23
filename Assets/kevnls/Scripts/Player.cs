@@ -17,8 +17,7 @@ namespace kevnls
         void Start() 
         {
             gameState = GameObject.Find("GameController").GetComponent<GameState>();
-            //this might cause problems if I add the ability to switch guns, if so move to Fire()
-            //leaving for performance reasons
+            //this might cause problems if I add the ability to switch guns, if so write a SwitchGun() function
             gun = GetComponentInChildren<Gun>();
 	    }
 
@@ -36,10 +35,12 @@ namespace kevnls
                 {
                     rageTimer = Time.fixedTime + rageDuration;
                     //do rage (updates)
+                    
                 }
                 else
                 {
                     EndInfectedRage();
+                    
                 }
             }
         }
@@ -54,7 +55,7 @@ namespace kevnls
             gameState.PlayerInfected();
         }
 
-        private void TriggerInfectedRage(float duration)
+        private void StartInfectedRage(float duration)
         {
             isRaging = true;
             rageDuration = duration;
