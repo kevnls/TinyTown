@@ -67,7 +67,7 @@ namespace kevnls
 
             if (playerInfecteds >= infectedTriggerCount)
             {
-                player.SendMessage("TriggerInfectedRage", infectedRageDuration);
+                player.SendMessage("StartInfectedRage", infectedRageDuration);
                 playerInfecteds = 0;
             }
         }
