@@ -13,6 +13,7 @@
 *.userprefs
 *.pidb
 *.booproj
+*.ide
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -71,4 +72,3 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-.vs/TinyTown/v15/sqlite3/storage.ide
